@@ -1,0 +1,266 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background: hsla(0, 0%, 14%, 1);
+
+    background: linear-gradient(90deg, hsla(0, 0%, 14%, 1) 0%, hsla(0, 0%, 9%, 1) 0%, hsla(0, 0%, 17%, 1) 41%, hsla(0, 0%, 20%, 1) 75%, hsla(0, 0%, 28%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(0, 0%, 14%, 1) 0%, hsla(0, 0%, 9%, 1) 0%, hsla(0, 0%, 17%, 1) 41%, hsla(0, 0%, 20%, 1) 75%, hsla(0, 0%, 28%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(0, 0%, 14%, 1) 0%, hsla(0, 0%, 9%, 1) 0%, hsla(0, 0%, 17%, 1) 41%, hsla(0, 0%, 20%, 1) 75%, hsla(0, 0%, 28%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#242424", endColorstr="#171717", GradientType=1);
+    font-family: Source Sans Pro;
+}
+.navbar{
+    height: 4rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+    border-radius: 24px;
+    background-color: white;
+}
+.login-button{
+    background-color: #cc0000;
+    color: white;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+.login-button:hover{
+    background-color: #cc0010;
+}
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.article-header {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+.header-image {
+    grid-column: 1 / -1;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.3);
+    animation: header-image-animation linear;
+    animation-timeline: view();
+    animation-range: exit;
+}
+
+@keyframes header-image-animation {
+    25% {
+        opacity: 1;
+    }
+
+    85%,
+    100% {
+        opacity: 0;
+        scale: 3;
+    }
+}
+
+.header-content {
+    animation: fade-out linear;
+    animation-timeline: view();
+    animation-range: exit -200px;
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
+}
+
+p {
+    text-align: justify;
+}
+
+.doublestrip {
+    font-size: 5rem;
+    padding-top: 3rem;
+    color: white;
+    animation: opacitytext linear forwards;
+    animation-timeline: view();
+    animation-range: 250px 500px;
+    opacity: 0;
+    color: #cc0000;
+}
+
+.text {
+    font-size: 1.4rem;
+    padding-right: 3rem;
+    color: white;
+    animation: opacitytext linear forwards;
+    animation-timeline: view();
+    animation-range: 250px 500px;
+    opacity: 0;
+}
+
+@keyframes opacitytext {
+    to {
+        opacity: 1;
+    }
+
+}
+
+.h1 {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.h2 {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+}
+
+.container1 {
+    margin-top: 8rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.image1 {
+    filter: brightness(0.7);
+    animation: opacity linear forwards;
+    animation-timeline: view();
+    animation-range: 250px 500px;
+    scale: .7;
+    opacity: 0;
+    padding: 3rem;
+    border-radius: 18%;
+}
+
+@keyframes opacity {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+
+}
+.card {
+    padding: 3rem 2rem;
+    background: #1c1c1c;
+    border-radius: 18%;
+    position: relative;
+    margin: 3rem;
+}
+.card:hover i{
+    color: white;
+    transition: all 1s ease-in-out;
+
+}
+.card:hover::before{
+    animation-play-state: paused;
+    background-color: white;
+    transition: all 1s ease-in-out;
+}
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.card::after,
+.card::before {
+    transition: all 1s ease-in-out;
+    --angle: 0deg;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 70%, white);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 18%;
+    animation: 8s spin linear infinite;
+}
+
+.card::before {
+    filter: blur(0.6rem);
+    opacity: 0.8;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+.card i {
+    font-size: 5rem;
+    margin-inline: auto;
+    color: transparent;
+    color: #cc0000;
+    font-weight: bold;
+    transition: all 1s ease-in-out;
+}
+
+.card .title {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.875rem;
+    margin-block: 2.5rem 1.5rem;
+    color: white;
+}
+
+.card p {
+    line-height: 1.5rem;
+    text-align: center;
+    opacity: 0.75;
+    color: white;
+    font-size: 1.2rem;
+}
+.lablec{
+    background-color: #1c1c1c;
+    color: white;
+    margin-top: 8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+.lablecresz{
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+}
+.h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.lablecresz p{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.copyriht{
+    font-size: 1rem;
+}
