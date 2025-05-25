@@ -12,31 +12,22 @@ body {
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#242424", endColorstr="#171717", GradientType=1);
     font-family: Source Sans Pro;
 }
-.navbar{
-    height: 4rem;
+
+.navbar {
+    height: 4.5rem;
     margin-left: 3rem;
     margin-right: 3rem;
     margin-top: 1rem;
     border-radius: 24px;
     background-color: white;
 }
-.login-button{
-    background-color: #cc0000;
-    color: white;
-    font-size: 14px;
-    padding: 8px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: 0.3s background-color;
-}
-.login-button:hover{
-    background-color: #cc0010;
-}
-.navbar-toggler{
+
+.navbar-toggler {
     border: none;
     font-size: 1.25rem;
 }
-.navbar-toggler:focus{
+
+.navbar-toggler:focus {
     box-shadow: none;
     outline: none;
 }
@@ -94,6 +85,32 @@ p {
     text-align: justify;
 }
 
+.nav-link {
+    color: #4f4f4f;
+    font-weight: bold;
+    position: relative;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+}
+
+.nav-link:hover,
+.activated {
+    color: #cc0000;
+}
+.offcanvas-body{
+    margin-top: 1rem solid;
+}
+.offcanvas-title{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.oldallogó{
+    height: 3rem;
+    border-radius: 15px;
+}
+.kerek{
+    border-radius: 50px;
+}
 .doublestrip {
     font-size: 5rem;
     padding-top: 3rem;
@@ -196,6 +213,7 @@ p {
     }
 
 }
+
 .card {
     padding: 3rem 2rem;
     background: #1c1c1c;
@@ -203,16 +221,19 @@ p {
     position: relative;
     margin: 3rem;
 }
-.card:hover i{
+
+.card:hover i {
     color: white;
     transition: all 1s ease-in-out;
 
 }
-.card:hover::before{
+
+.card:hover::before {
     animation-play-state: paused;
     background-color: white;
     transition: all 1s ease-in-out;
 }
+
 @property --angle {
     syntax: "<angle>";
     initial-value: 0deg;
@@ -276,7 +297,8 @@ p {
     color: white;
     font-size: 1.2rem;
 }
-.lablec{
+
+.lablec {
     background-color: #1c1c1c;
     color: white;
     margin-top: 8rem;
@@ -285,20 +307,24 @@ p {
     text-align: center;
     padding-bottom: 3rem;
 }
-.lablecresz{
+
+.lablecresz {
     padding-top: 2rem;
     padding-bottom: 2.5rem;
 }
-.h3{
+
+.h3 {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 16px;
 }
-.lablecresz p{
+
+.lablecresz p {
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 16px;
 }
-.copyriht{
+
+.copyriht {
     font-size: 1rem;
 }
